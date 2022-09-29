@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textPhoneLbl"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="Phone Number?"
+        android:gravity="bottom"
+        android:textStyle="bold"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.hbb20.CountryCodePicker
+        android:id="@+id/countryCode_picker"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/textPhoneLbl"
+        />
+
+    <EditText
+        android:id="@+id/editTextPhone"
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/editboxborder"
+         android:hint="@string/phone_number_hint"
+        android:inputType="phone"
+        android:textColorHint="@color/blue"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/textPhoneLbl"
+        app:layout_constraintLeft_toRightOf="@id/countryCode_picker"/>
+
+    <TextView
+        android:id="@+id/textMessageLbl"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_height="30dp"
+        android:text="Message?"
+        android:gravity="bottom"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextPhone" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        app:layout_constraintTop_toBottomOf="@id/textMessageLbl">
+
+        <EditText
+            android:id="@+id/editTextMessage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".80"
+            android:layout_margin="5dp"
+            android:layout_marginLeft="5dp"
+            android:minLines="3"
+            android:inputType="textMultiLine"
+            android:hint="@string/message_hint"
+            android:background="@drawable/editboxborder"
+            android:gravity="top"
+            android:drawableBottom="@color/xxxxx"/>
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_weight=".20"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_btn_send_foreground"
+            android:background="@drawable/btn_send"
+            />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

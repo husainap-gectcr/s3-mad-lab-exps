@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Mental Maths</string>
+    <string name="result_correct">CORRECT</string>
+    <string name="result_wrong">WRONG</string>
+</resources>
