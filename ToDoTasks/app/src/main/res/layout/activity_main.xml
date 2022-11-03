@@ -6,15 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/txtViewTasks"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="ToDO Tasks"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        android:paddingBottom="5dp"
- />
+
 
     <ListView
         android:id="@+id/lstViewTasks"
@@ -22,9 +14,7 @@
         android:layout_height="match_parent"
         android:layout_marginStart="16dp"
         android:divider="@color/purple_200"
-        android:dividerHeight="1d="@id/txtViewTasks"
-
-        app:layout_constraintTop_toBottomOf="@id/txtViewTasks"
+        android:dividerHeight="5dp"
         app:layout_constraintVertical_bias="0.0"></ListView>
 
 

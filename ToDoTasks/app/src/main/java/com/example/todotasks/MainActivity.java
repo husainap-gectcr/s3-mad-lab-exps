@@ -11,7 +11,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        String tasks[] = {"Task1", "Android Lab", "Mini Project", "Series Test 2"};
+        String tasks[] = {"Task1", "Android Lab", "Mini Project", "Series Test 2","task 2"};
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         list = (ListView) findViewById(R.id.lstViewTasks);
